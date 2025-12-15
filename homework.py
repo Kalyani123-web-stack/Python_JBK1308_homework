@@ -1,0 +1,187 @@
+#Task-use min 10 string operations on your name.
+'''name='Kalyani_Nerkar'
+print('Type of name:',type(name))                                          #type 
+print('Length of name:',len(name))                                         #length of str
+print('first element:',name[0])                                            #extract first element
+print('last element:',name[-1])                                            #extract last element
+print(name[0]+name[1]+name[2]+name[3]+name[4]+name[5])                     #extract 'Kalyan' using positive indexing
+print(name[7])                                                             #extract underscore from str
+print(name[-6]+name[-5]+name[-4]+name[-3]+name[-2]+name[-1])               #extract 'Nerkar' using negative indexing
+print(name[6]+name[7]+name[-6])                                            #extract 'i_N' from str
+print(name[6]+name[5]+name[4]+name[3]+name[2]+name[1]+name[0])             #reverse 'Kalyani' using positive indexing
+print(name[2]+name[6]+name[9])'''                                         #extract 'lie' word from str
+
+#--------------------------------------------------------
+#20 operations on your name:slicing,+ve,-ve,p-step size,n-step size,iterate to find freq of any char.
+'''name='Kalyani Nerkar'
+#slicing operations
+print(name[0:14])                           #start index:end index+1
+print(name[:])                            #start & end index optional
+print(name[0:14:2])                       #step size is 2
+print(name[::-2])                           # step size is -2
+print(name[::-1])                            #step size is -1(reverse str)
+print(name[0::3])                            #step size is 3
+print(name[-1:-7:-1])
+print(name[6:])
+print(name[1:7:2])
+print(name[0:1:1])                          #'K'
+print(name[-3:])                            #'kar'
+print(name[-1:-6:])                          #empty str  
+
+#for loop to iterate over name
+for ch in name:
+ print('Good morning')                      #'Good morning'is len(name)-1=13
+
+
+#iterate with index
+i=0
+for ch in name:
+    print(i,'---->',ch)
+    i+=1
+
+#find freq of 'a' in name
+count=0
+for ch in name:
+    if ch=='a':
+        count=count+1
+print('Total no. of a:',count)
+
+#find  'k' in name
+for ch in name[0:14]:
+    if ch=='k':
+        print('k is present in name')
+
+#find space in name
+for ch in name:
+    if ch==' ':
+        print('Space is found in name')
+
+#find freq of 'r' in name using reverse str
+count_r=0
+for ch in name[::-1]:
+    if ch=='r':
+        count_r+=1
+print('Total no. of r:',count_r)
+
+#find index of 'n' in name
+for ch in name[:7]:
+    if ch=='n':
+        print(ch,': index is 5')
+
+#find 'y' in name
+for ch in name[:]:
+    if ch=='y':
+        print('Hello')'''
+
+#Top 4 team of ipl-mi,rcb,pbsk,rr
+# 11 players name list of each team
+'''RCB=['Faf du Plessis','Virat Kohli','Glenn Maxwell','Shivam Dube','Dinesh Karthik','Mohammad Siraj','Harshal Patel','Wanindu Hasaranga','Anuj Rawat','Akash Deep','Rajat Patidar']
+PBSK=['Shikhar Dhawan','Prabhsimran Singh','Rahmanullah Gurbaz','Lungi Ngidi','Harpreet Brar','Ravi Bishnoi','Arshdeep Singh','Deepak Hooda','Moeen Ali','Shahbaz Ahmed','Avesh Khan']
+RR=['Sanju Samson','Jos Buttler','Yashasvi Jaiswal','Dev dutt Padikkal','Shimron Hetmyer','Ravichandran Ashwin','Trent Boult','Prasidh Krishna','Yuzvendra Chahal','Mahipal Lomror','Kuldip Yadav']
+MI=['Rohit Sharma','Ishan Kishan','Suryakumar Yadav','Tilak Varma','Kieron Pollard','Jasprit Bumrah','Arjun Tendulkar','Tim David','Daniel Sams','Hrithik Shokeen','Jaydev Unadkat']
+
+superforce=[RCB,PBSK,RR,MI]
+#print(superforce)
+# print(len(superforce))                    #no. of teams
+
+# print(superforce[0][1])                   #Virat Kohli
+print(superforce[1][-1])                    #Avesh Khan
+print(superforce[3][0:8:2])   '''            #MI players with step size 2
+
+#Find total no. of players in RCB team         #11
+'''count_players=0
+for team in superforce[0]:
+    count_players+=1
+print('Total no. of players in RCB team:',count_players)'''
+
+#Find total no. of players in all 4 teams       #44
+'''l1=[]
+for sublist in superforce:
+    for i in sublist:
+        l1.append(i)
+print('Total no. of players in 4 teams:',len(l1))
+print(l1)'''
+
+#Iterate players in l1 with index.
+'''i=0
+for player in l1:
+    print(i,'----->',player)
+    i+=1'''
+#------------------------------------------------------
+#Add tuple in list & process your list & viceversa.(, , [,],)
+
+MI=['Rohit Sharma','Ishan Kishan','Suryakumar Yadav','Tilak Varma','Kieron Pollard','Jasprit Bumrah','Arjun Tendulkar','Tim David','Daniel Sams','Hrithik Shokeen','Jaydev Unadkat']
+print('MI:',type(MI))      #list
+
+#list to tuple
+# MI1=tuple(MI)
+# print('MI1:',type(MI1))     #tuple
+# print(MI1)
+
+#add list in tuple
+RR=['Sanju Samson','Jos Buttler','Yashasvi Jaiswal','Dev dutt Padikkal','Shimron Hetmyer','Ravichandran Ashwin','Trent Boult','Prasidh Krishna','Yuzvendra Chahal','Mahipal Lomror','Kuldip Yadav']
+# res=MI1+tuple(RR)
+# print(res)             #('Rohit Sharma',...........,'Kuldip Yadav')
+# print(type(res))      #tuple
+# print(len(res))       #22
+
+MI.append(RR)  
+print(MI)             #nested list
+MI[-1]=tuple(MI[-1])   #convert last element(list) into tuple
+print(MI)              #list with tuple inside
+
+
+
+#find index
+# r1=res.index('Sanju Samson')
+# print('Index of Sanju Samson:', r1)  #11
+
+# #slicing of tuple
+# print(res[0:22:2])  #players with step size 2
+
+# #unpacking of tuple
+# new=(res[0:5])
+# print(new)      #('Rohit Sharma', 'Ishan Kishan', 'Suryakumar Yadav', 'Tilak Varma', 'Kieron Pollard')
+# p1,p2,p3,p4,p5='Rohit Sharma', 'Ishan Kishan', 'Suryakumar Yadav', 'Tilak Varma', 'Kieron Pollard'
+# print(p1)      #Rohit Sharma
+# print(p2)      #Ishan Kishan        
+# print(p3)      #Suryakumar Yadav
+# print(p4)      #Tilak Varma
+# print(p5)      #Kieron Pollard
+
+# #count players starting with 'J'
+# count=0
+# for player in res:
+#     if player.startswith('J'):
+#         print(player)
+#         count+=1
+# print('Total players starting with J:', count)  #3
+
+#-----------------------------------------------------------------------------------------
+#tuple to list
+'''RCB='Faf du Plessis','Virat Kohli','Glenn Maxwell','Shivam Dube','Dinesh Karthik','Mohammad Siraj','Harshal Patel','Wanindu Hasaranga','Anuj Rawat','Akash Deep','Rajat Patidar'
+print('RCB:',type(RCB))      #tuple   
+
+#tuple to list
+RCB1=list(RCB)
+print('RCB1:',type(RCB1))    #list
+print(RCB1)
+
+PBSK=['Shikhar Dhawan','Prabhsimran Singh','Rahmanullah Gurbaz','Lungi Ngidi','Harpreet Brar','Ravi Bishnoi','Arshdeep Singh','Deepak Hooda','Moeen Ali','Shahbaz Ahmed','Avesh Khan']
+RCB1.append(PBSK)
+print('RCB1 + PBSK:',RCB1)   #nested list
+
+#add list in tuple
+r1=tuple(RCB1[:])
+print('r1:',r1)     #tuple with list inside                
+#r1: ('Faf du Plessis', 'Virat Kohli', 'Glenn Maxwell', 'Shivam Dube', 'Dinesh Karthik', 'Mohammad Siraj', 'Harshal Patel', 'Wanindu Hasaranga', 'Anuj Rawat', 'Akash Deep', 'Rajat Patidar', ['Shikhar Dhawan', 'Prabhsimran Singh', 'Rahmanullah Gurbaz', 'Lungi Ngidi', 'Harpreet Brar', 'Ravi Bishnoi', 'Arshdeep Singh', 'Deepak Hooda', 'Moeen Ali', 'Shahbaz Ahmed', 'Avesh Khan'])
+
+
+
+#indexing of list
+i=0
+for player in RCB1:
+    print(i,'--->',player)
+    i+=1'''
+    
+
