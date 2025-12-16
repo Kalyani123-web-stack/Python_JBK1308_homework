@@ -1,1 +1,38 @@
+#iterate IPL superforce using range data type to display mi team players.
 
+RCB=['Faf du Plessis','Virat Kohli','Glenn Maxwell','Shivam Dube','Dinesh Karthik','Mohammad Siraj','Harshal Patel','Wanindu Hasaranga','Anuj Rawat','Akash Deep','Rajat Patidar']
+PBSK=['Shikhar Dhawan','Prabhsimran Singh','Rahmanullah Gurbaz','Lungi Ngidi','Harpreet Brar','Ravi Bishnoi','Arshdeep Singh','Deepak Hooda','Moeen Ali','Shahbaz Ahmed','Avesh Khan']
+RR=['Sanju Samson','Jos Buttler','Yashasvi Jaiswal','Dev dutt Padikkal','Shimron Hetmyer','Ravichandran Ashwin','Trent Boult','Prasidh Krishna','Yuzvendra Chahal','Mahipal Lomror','Kuldip Yadav']
+MI=['Rohit Sharma','Ishan Kishan','Suryakumar Yadav','Tilak Varma','Kieron Pollard','Jasprit Bumrah','Arjun Tendulkar','Tim David','Daniel Sams','Hrithik Shokeen','Jaydev Unadkat']
+
+superforce=[RCB,PBSK,RR,MI]
+
+#iterate MI team players using range
+'''for i in range(len(superforce[3])):
+    print(superforce[3][i])'''
+
+#nested for loop to iterate MI team players
+'''for i in range(len(superforce[3])):
+    for j in range(len(superforce[3][i])):
+        print(superforce[3][i][j])'''
+
+'''p=[]
+for i in range(0,len(superforce),2):       #RCb and RR teams players
+    for j in range(len(superforce[i])):
+        if superforce[i][j].startswith('S'):
+         p.append(superforce[i][j])
+print(p)                                #['Shivam Dube', 'Sanju Samson', 'Shimron Hetmyer']
+print(len(p))'''                             #3
+
+#-----------------------------------------------
+#tuple iterate using range to create 2 list.
+marks=(80,90,75,60,55,45,70,88,92,78)
+topper=[]
+avrage=[]
+for i in range(len(marks)):
+    if marks[i]>=60:
+        topper.append(marks[i])
+    else:
+        avrage.append(marks[i])
+print('Topper Marks:',topper)   
+print('Avrage Marks:',avrage) 
