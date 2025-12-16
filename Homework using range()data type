@@ -34,5 +34,5 @@ for i in range(len(marks)):
         topper.append(marks[i])
     else:
         avrage.append(marks[i])
-print('Topper Marks:',topper)   
-print('Avrage Marks:',avrage) 
+print('Topper Marks:',topper)     #Topper Marks: [80, 90, 75, 60, 70, 88, 92, 78]
+print('Avrage Marks:',avrage)     #Avrage Marks: [55, 45]
