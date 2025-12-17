@@ -47,11 +47,12 @@ a = frozenset({1, 2, 3})
 b = frozenset({3, 4})
 print(a.union(b))                #frozenset({1, 2, 3,4})
 print(a.intersection(b)) '''        # frozenset({3})
-
+#-----------------------------------------------------------
 #try to add tuple and list in set
 s={1,2,3}
 # s.add((4,'hi',9))
 # print('Add tuple in set:',s)      #{1, 2, 3, (4, 'hi', 9)}
 
 s.add(['a','b'])
-print('Add list in set:',s)   
+
+print('Add list in set:',s)       #TypeError: unhashable type: 'list'
