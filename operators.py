@@ -1,4 +1,56 @@
 #Perform Arithmatic  operation on all data types.
+#Fundamental data types
+#1.int(supported arithmetic)
+'''a=10
+b=3
+
+print(a+b)  #13
+print(a-b)  #7 
+print(a*b)  #30
+print(a/b)  #3.33
+print(a%b)  #1  (gives remainder)
+print(a//b)'''  #3  (gives quotient)
+#-------------------------------------------
+#2.float(supported arithmetic)
+'''x=10.5
+y=2.0
+
+print(x+y)  #12.5
+print(x-y)   #8.5
+print(x*y)   #21.0
+print(x/y)   #5.25
+print(x%y)   #0.5
+print(x//y)'''  #5.0
+#--------------------------------------------
+#3.int+float(supported;result is always float)
+'''a=10
+b=2.5
+
+print(a+b) #12.5
+print(a-b) #7.5
+print(a*b)  #25.0
+print(a/b)  #4.0
+print(a%b)  #0.0
+print(a//b) '''#4.0
+#------------------------------------------------
+#4.Complex
+'''a=2+3j
+b=1+1j
+
+print(a+b) #(3+4j)
+print(a-b) #(1+2j)
+print(a*b) #(-1+5j)
+print(a-b) #(1+2j)
+print(a/b) #(2.5+0.5j)
+print(a%b) #not supported
+print(a//b)''' #not supported
+#----------------------------------------------
+#5.bool
+'''print(True+True) #2
+print(True+False) #1
+print(False*5) '''  #0
+#====================================================
+#Collective Data Types
 #1.string 
 # addition-str1+str2 --->concatination of 2 strings
 '''str1='Welcome'
@@ -133,15 +185,29 @@ res1=var1 + var2
 print(res1)'''                #TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
 #===============================================================================================
 #Summary Table
+# + = Addition, - = Subtraction, * = Multiplication, / = Division
 
-# Data type                  Operation                                
-#                  Addition              Subtraction                    Multiplication
-# 1.String         Supported              Not supported                  Not supported
-# 2.List           Supported              Not supported                  Not supported
-# 3.Tuple          Supported              Not supported                  Not supported   
-# 4.Set            Not supported           Supported                     Not supported
-# 5.Dictionary     Not supported          Not supported                  Not supported  
-# 6.Bytes          Supported              Not supported                  Not supported
-# 7.Bytearray      Supported              Not supported                  Not supported
-# 8.Range          Not supported          Not supported                  Not supported
-# 9.NoneType       Not supported          Not supported                  Not supported
+# Data Type   |  +  |  -   |  *  |  /  |  %   |  //
+# --------------------------------------------------
+# int         |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔
+# float       |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔
+# complex     |  ✔  |  ✔  |  ✔  |  ✔  |  ✖  |  ✖
+# bool        |  ✔  |  ✔  |  ✔  |  ✔  |  ✔  |  ✔
+# string      |  ✔  |  ✖  |  ✔  |  ✖  |  ✖  |  ✖
+# list        |  ✔  |  ✖  |  ✔  |  ✖  |  ✖  |  ✖
+# tuple       |  ✔  |  ✖  |  ✔  |  ✖  |  ✖  |  ✖
+# set         |  ✖  |  ✔  |  ✖  |  ✖  |  ✖  |  ✖
+# dict        |  ✖  |  ✖  |  ✖  |  ✖  |  ✖  |  ✖
+# bytes       |  ✔  |  ✖  |  ✔  |  ✖  |  ✖  |  ✖
+# bytearray   |  ✔  |  ✖  |  ✔  |  ✖  |  ✖  |  ✖
+# range       |  ✖  |  ✖  |  ✔  |  ✖  |  ✖  |  ✖
+# NoneType    |  ✖  |  ✖  |  ✖  |  ✖  |  ✖  |  ✖
+
+# Key Memory Tips (Very Important)
+#Only numeric types fully support / % //.
+#complex does not support % and //.
+#Sequence types (str, list, tuple, bytes, bytearray):
+'''+ → concatenation
+* → repetition'''
+#set:Only - (difference) works
+#NoneType:No arithmetic operations at all
