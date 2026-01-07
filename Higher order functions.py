@@ -62,6 +62,7 @@ print(max_num)'''
 min_num=reduce(fmin,test_marks)
 print(min_num)'''
 #------------------------------------------------------
+#self practice questions:
 # Part 1: map() 
 
 # 1. Square Numbers
@@ -180,3 +181,4 @@ even_sum=reduce(sum,square_list)
 print(f'Even list:{even_nums}')              #Even list:[2, 4, 6]
 print(f'Even_Square list:{square_list}')     #Even_Square list:[4, 16, 36]
 print(f'Sum_of_square:{even_sum}')   '''        #Sum_of_square:56
+
